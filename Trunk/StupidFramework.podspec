@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = "StupidFramework"
-  s.version = "5.0.4"
-  s.summary = "魔度引擎"
+  s.version = "0.0.1"
+  s.summary = "???"
 
   s.description = <<-DESC
   A repo to test XCFramework
