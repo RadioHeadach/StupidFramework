@@ -1,0 +1,6 @@
+framework module StupidFramework {
+  umbrella header "StupidFramework.h"
+
+  export *
+  module * { export * }
+}

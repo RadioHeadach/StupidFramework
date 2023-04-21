@@ -1,0 +1,33 @@
+name: StupidFramework
+options:
+  deploymentTarget:
+    iOS: 8.0
+  # 生成项目后自动执行 pod install
+  postGenCommand: pod install
+targets:
+  StupidFramework:
+    # MARK: 项目类型为：静态库
+    type: framework.static
+    # MARK: 支持的系统
+    platform: iOS
+    # MARK: 支持的系统吧版本
+    deploymentTarget: 8.0
+
+
+    # MARK: target 的 build setting
+    settings:
+      base:
+      # MARK: 苹果规定如果要生成 .xcframework 就一定要设置为 YES
+        BUILD_LIBRARY_FOR_DISTRIBUTION: YES
+      configs:
+        Debug:
+          # MARK: 设置不支持的架构为空，适配 M 芯片电脑的模拟器
+          EXCLUDED_ARCHS: ""
+        Release:
+          # MARK: 设置不支持的架构为空，适配 M 芯片电脑的模拟器
+          EXCLUDED_ARCHS: ""
+    # MARK: 项目的源文件
+    sources:
+      - path: ../StupidFramework
+        type: group
+        name: StupidFramework
